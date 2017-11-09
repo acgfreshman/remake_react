@@ -1,9 +1,22 @@
 import React, { Component } from 'react';
+import MyNavbar from './frontpage/myNavbar';
+
+
 
 export default class App extends Component {
-  render() {
+    constructor(props){
+        super(props);
+        this.state = {
+            title:'Coldient.com',
+            items:['Home', 'About', 'Contact','MyProgress', 'Login']
+        };
+    }
+
+    render() {
     return (
-      <div>React simple starter</div>
+        <div>
+            <MyNavbar title={this.state.title} items={this.state.items}/>
+        </div>
     );
   }
 }
