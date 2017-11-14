@@ -1,0 +1,16 @@
+body {
+    font-family: 'Lora', serif !important;
+}
+
+header{
+    padding-top: 70px;
+}
+
+.profile{
+    padding-top: 50px;
+}
+
+.logo {
+    font-size: 180px;
+}
+

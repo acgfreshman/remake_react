@@ -12,16 +12,16 @@ class MyNavbar extends React.Component {
 
     render(){
         const itemMapping = this.props.items.map((item, index) => {
-            return(
-                <NavItem key={index} eventKey={index+1}>
-                    {item}
-                </NavItem>
-            );
+                return(
+                    <NavItem key={index} eventKey={index+1}>
+                        {item}
+                    </NavItem>
+                );
         });
 
         return (
             <div>
-                <Navbar inverse collapseOnSelect>
+                <Navbar inverse collapseOnSelect fixedTop>
                     <Navbar.Header>
                         <Navbar.Brand>
                             <a href="#">{this.props.title}</a>
@@ -30,16 +30,7 @@ class MyNavbar extends React.Component {
                     </Navbar.Header>
                     <Navbar.Collapse>
                         <Nav pullRight>
-                            {/*
-                            <NavItem eventKey={1} href="#">Link Right</NavItem>
-                            <NavItem eventKey={2} href="#">Link Right</NavItem>
-                            <NavItem eventKey={3} href="#">Link Right</NavItem>
-                            <NavItem eventKey={4} href="#">Link Right</NavItem>
-                            <NavItem eventKey={5} href="#">Link Right</NavItem>
-                            */
-                            itemMapping
-                            }
-
+                            {itemMapping}
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
